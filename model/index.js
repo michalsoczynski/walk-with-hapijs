@@ -4,12 +4,6 @@ var config = require('../config');
 
 orm.loadCollection(require('./user'));
 
-orm.initialize(config, function(err, models) {
-  if(err) {
-    console.log(err);
-  };
-
-  module.exports = models;
-});
+orm.initialize(config, function(err, models) {});
 
 module.exports = orm.collections;

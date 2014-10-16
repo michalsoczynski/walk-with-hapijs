@@ -1,5 +1,9 @@
+var mysqlAdapter = require('sails-mysql');
+
 module.exports = {
     'connections': require('./connections'),
-    'adapters': require('./adapters'),
-    'models': require('./models')
+    'adapters':  {
+        default: mysqlAdapter,
+        mysql: mysqlAdapter
+    }
 };
